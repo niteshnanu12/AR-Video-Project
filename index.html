@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AR Video Example</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs="sourceType: webcam;">
+        <!-- Marker -->
+        <a-marker preset="hiro">
+            <!-- AR Video Element -->
+            <a-video src="#ganeshaVideo" position="0 0 0" rotation="-90 0 0" width="1" height="1"></a-video>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+
+    <!-- Defining Video Source -->
+    <video id="ganeshaVideo" src="Ganesha/CHE GUVARA BOYS.mp4" preload="auto" crossorigin="anonymous" loop="true"></video>
+</body>
+</html>
